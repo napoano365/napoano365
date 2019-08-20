@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'jquery-rails'
+gem 'sprockets-rails', '~> 3.2'
+gem 'font-awesome-sass'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record

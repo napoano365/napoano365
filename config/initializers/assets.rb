@@ -12,3 +12,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
+
+# FIXME: rails sでエラーが出たので追加したのが以下の設定。つまりほかのjsファイルも設定ができていなくてうまくアセットパイプラインでコンパイルできていない？
+Rails.application.config.assets.precompile += %w( jquery.min.js )
+Rails.application.config.assets.precompile += %w( font-awesome.min.css )
