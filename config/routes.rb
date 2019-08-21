@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   get 'about', to: 'home#about'
   #get 'user/edit/:id' to: 'user#edit'
   resources :blogs, only: [:index, :show]
+  resources :contacts, only: [:new]
 
 end
