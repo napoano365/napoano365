@@ -11,10 +11,12 @@
   <nav role="footer-nav">
     <ul>
       <li>
-        <a href="index.html" title="Work">Work</a>
+        <%= link_to(root_url, title: 'Work') do %>Work
+        <% end %>
       </li>
       <li>
-        <a href="about.html" title="About">About</a>
+        <%= link_to(about_url, title: 'About') do %>About
+        <% end %>
       </li>
       <li>
         <%= link_to(blogs_url, title: 'Blog') do %>Blog
