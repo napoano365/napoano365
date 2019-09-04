@@ -10,7 +10,6 @@
         </header>
         <p>Get all information about our studio from latest news posts & updates page.</p>
       </article>
-
       <ul class="grid-lod effect-2" id="grid">
         <li>
           <section class="blog-content">
@@ -97,6 +96,35 @@
         </li>
       </ul>
     </div>
+    <!--  作業エリア  -->
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <ul class="grid-lod effect-2" id="grid">
+        <% @blogs.each do|blog| %>
+          <li>
+            <section class="blog-content">
+              <%= link_to(blog_path(blog), class: "blog-content") do %>
+                <figure>
+                  <div class="post-date">
+                    <span><%= blog.created_at.strftime('%d') %></span>
+                    <%= blog.created_at.strftime('%B %y') %>
+                  </div>
+                  <!-- <#%= image_tag("blog-images/blog-1.jpg" , alt: "", class: "img-responsive") %> -->
+                  <%= blog.get_image %>
+                  <!-- "blog-images/blog-1.jpg" -->
+                </figure>
+              <% end %>
+              <article>
+                <%= blog.title %>
+              </article>
+            </section>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <!--  作業エリア  -->
+
+
+
 
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
       <ul class="grid-lod effect-2" id="grid">

@@ -1,0 +1,17 @@
+<%= form_with(model: blog, scope: :blog, url: url, local: true) do |form| %>
+  <div class="field">
+    <% if blog.nil? %>
+      <%= form.label :title %><br/>
+      <%= form.text_field :title, :class => 'form-control'%><br/>
+      <%= form.label :content %><br/>
+      <%= form.rich_text_area :content %><br/>
+    <% else %>
+      <%= form.label :title %><br/>
+      <%= form.text_field :title, placeholder: blog.title, :class => 'form-control'%><br/>
+      <%= form.label :content %><br/>
+      <%= form.rich_text_area :content, placeholder: blog.content %><br/>
+      <%= hidden_field_tag :id, blog.id %>
+    <% end %>
+    <%= form.submit btn_name, class: "btn btn-primary" %>
+  </div>
+<% end %>

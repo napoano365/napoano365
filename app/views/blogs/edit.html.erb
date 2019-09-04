@@ -1,0 +1,8 @@
+<main role="main-inner-wrapper" class="container">
+  <div class="blog-details">
+  <div class="blog-new .commentys-form">
+    <h2>ブログ編集</h2>
+    <%= render partial: 'blogs/blog_form', locals: { blog: @blog, url: "/blogs/#{@blog.id}", btn_name: "Update" } %>
+  </div>
+  </div>
+</main>
